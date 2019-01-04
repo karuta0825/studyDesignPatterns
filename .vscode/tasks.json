@@ -1,0 +1,48 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile TypeScript",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "1_Iterator",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/1_Iterator/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "2_Adapter",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/2_Adapter/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "3_TemplateMethod",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/3_TemplateMethod/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "4_FactoryMethod",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/4_FactoryMethod/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "5_Singleton",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/5_Singleton/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    }
+  ]
+}
