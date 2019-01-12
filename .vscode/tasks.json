@@ -38,9 +38,9 @@
       "problemMatcher": "$tsc"
     },
     {
-      "label": "5_Singleton",
+      "label": "11_Composite",
       "type": "shell",
-      "command": "node ${workspaceFolder}/build/5_Singleton/Main.js",
+      "command": "node ${workspaceFolder}/build/11_Composite/Main.js",
       "dependsOn": ["Compile TypeScript"],
       "problemMatcher": "$tsc"
     }
