@@ -1,12 +1,17 @@
 import Entry from "./Entry";
+import Visitor from './Visitor';
+import IIterator from './IIterator';
+import DirecotryIterator from './DirecotyIterator';
 
 export default class Directory extends Entry {
   private name: string;
   private entries: Entry[];
+  private index: number;
   constructor(name: string) {
     super();
     this.name = name;
     this.entries = [];
+    this.index = 0;
   }
 
   public getName(): string {
@@ -22,11 +27,21 @@ export default class Directory extends Entry {
     return this.entries.reduce((acc, entry) => acc + entry.getSize(), 0);
   }
 
-  // この再帰が肝で、引数にprefixを渡していくことでパスがうまく表現できてる
-  public printList(prefix: string = ""): void {
-    console.log(`${prefix}/${this.toString()}`);
-    this.entries.forEach((entry) => {
-      entry.printList(`${prefix}/${this.name}`);
-    });
+  public accept(v: Visitor): void {
+    v.visit(this);
   }
+
+  public getAt(index: number): Entry{
+    return this.entries[index];
+  }
+
+  public getLength(): number {
+    return this.entries.length;
+  }
+
+  public iterator(): IIterator {
+    return new DirecotryIterator(this);
+  }
+
 }
+

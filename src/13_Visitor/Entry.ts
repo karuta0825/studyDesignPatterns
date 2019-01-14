@@ -1,6 +1,8 @@
 import FileThreatmentException from "./FileTreatmentException";
+import IElement from "./IElement";
+import Visitor from './Visitor';
 
-export default abstract class Entry {
+export default abstract class Entry implements IElement {
   public abstract getName(): string;
   public abstract getSize(): number;
   public add(entry: Entry): Entry | never {
@@ -10,7 +12,5 @@ export default abstract class Entry {
   public toString(): string {
     return `${this.getName()} (${this.getSize()})`;
   }
-
-  // overloadは、デフォルト引数を利用する
-  public abstract printList(prefix: string): void;
+  public abstract accept(v: Visitor): void;
 }

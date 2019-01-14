@@ -38,9 +38,23 @@
       "problemMatcher": "$tsc"
     },
     {
+      "label": "7_Builder",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/7_Builder/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
       "label": "11_Composite",
       "type": "shell",
       "command": "node ${workspaceFolder}/build/11_Composite/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "13_Visitor",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/13_Visitor/Main.js",
       "dependsOn": ["Compile TypeScript"],
       "problemMatcher": "$tsc"
     }

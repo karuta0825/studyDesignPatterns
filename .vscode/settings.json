@@ -1,5 +1,6 @@
 {
   "flow.useNPMPackagedFlow": false,
   "javascript.validate.enable": true,
-  "tslint.autoFixOnSave": true
+  "tslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
 }
