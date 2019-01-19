@@ -57,6 +57,13 @@
       "command": "node ${workspaceFolder}/build/13_Visitor/Main.js",
       "dependsOn": ["Compile TypeScript"],
       "problemMatcher": "$tsc"
+    },
+    {
+      "label": "14_ChainOfResponsibility",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/14_ChainOfResponsibility/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
     }
   ]
 }
