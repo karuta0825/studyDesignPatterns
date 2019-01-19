@@ -1,6 +1,6 @@
+import Directory from "./Directory";
+import Entry from "./Entry";
 import IIterator from "./IIterator";
-import Directory from './Directory';
-import Entry from './Entry';
 
 export default class DirecotryIterator implements IIterator {
   private direcotry: Directory;
@@ -20,5 +20,4 @@ export default class DirecotryIterator implements IIterator {
     this.index++;
     return entry;
   }
-
 }

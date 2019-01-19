@@ -1,4 +1,4 @@
-import Visitor from './Visitor';
+import Visitor from "./Visitor";
 
 export default interface IElement {
   accept(v: Visitor): void;

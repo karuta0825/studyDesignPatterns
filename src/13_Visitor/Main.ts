@@ -1,9 +1,8 @@
-import File from './File';
-import Directory from './Directory';
-import ListVisitor from './ListVisitor';
+import Directory from "./Directory";
+import File from "./File";
+import ListVisitor from "./ListVisitor";
 
-
-(function Main(){
+(function Main() {
   const file1 = new File("file1", 100);
   const file2 = new File("file2", 200);
   const file3 = new File("file3", 300);
@@ -15,4 +14,4 @@ import ListVisitor from './ListVisitor';
   dir2.add(dir1);
   dir2.add(file4);
   dir2.accept(new ListVisitor());
-}())
+})();

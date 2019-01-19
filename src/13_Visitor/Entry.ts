@@ -1,6 +1,6 @@
 import FileThreatmentException from "./FileTreatmentException";
 import IElement from "./IElement";
-import Visitor from './Visitor';
+import Visitor from "./Visitor";
 
 export default abstract class Entry implements IElement {
   public abstract getName(): string;

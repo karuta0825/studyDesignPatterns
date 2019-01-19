@@ -1,5 +1,5 @@
 import Entry from "./Entry";
-import Visitor from './Visitor';
+import Visitor from "./Visitor";
 
 export default class File extends Entry {
   private name: string;

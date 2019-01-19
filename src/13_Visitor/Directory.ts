@@ -1,7 +1,7 @@
+import DirecotryIterator from "./DirecotyIterator";
 import Entry from "./Entry";
-import Visitor from './Visitor';
-import IIterator from './IIterator';
-import DirecotryIterator from './DirecotyIterator';
+import IIterator from "./IIterator";
+import Visitor from "./Visitor";
 
 export default class Directory extends Entry {
   private name: string;
@@ -31,7 +31,7 @@ export default class Directory extends Entry {
     v.visit(this);
   }
 
-  public getAt(index: number): Entry{
+  public getAt(index: number): Entry {
     return this.entries[index];
   }
 
@@ -42,6 +42,4 @@ export default class Directory extends Entry {
   public iterator(): IIterator {
     return new DirecotryIterator(this);
   }
-
 }
-
