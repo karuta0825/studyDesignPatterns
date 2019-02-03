@@ -45,6 +45,13 @@
       "problemMatcher": "$tsc"
     },
     {
+      "label": "9_Bridge",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/9_Bridge/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
       "label": "11_Composite",
       "type": "shell",
       "command": "node ${workspaceFolder}/build/11_Composite/Main.js",
