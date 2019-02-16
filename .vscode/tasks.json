@@ -71,6 +71,19 @@
       "command": "node ${workspaceFolder}/build/14_ChainOfResponsibility/Main.js",
       "dependsOn": ["Compile TypeScript"],
       "problemMatcher": "$tsc"
+    },
+    {
+      "label": "17_Observer",
+      "type": "shell",
+      "command": "node ${workspaceFolder}/build/17_Observer/Main.js",
+      "dependsOn": ["Compile TypeScript"],
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "19_State",
+      "type": "shell",
+      "command": "./node_modules/.bin/webpack-dev-server --config src/webpackTest/webpack.config.js",
+      "problemMatcher": "$tsc"
     }
   ]
 }
