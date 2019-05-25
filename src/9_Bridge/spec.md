@@ -5,7 +5,7 @@
 1. 機能クラス
 2. 実装クラス
 
-```plantuml
+```uml
 @startuml
 
 note top of Display: 機能クラス
